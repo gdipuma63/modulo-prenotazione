@@ -9,7 +9,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     return;
   }
 
-  const numeroWhatsApp = "393457616130"; // Sostituisci con il tuo numero!
+  const numeroWhatsApp = "393516986460"; // Sostituisci con il tuo numero!
   const messaggio = `Salve! Vorrei prenotare a nome di ${name} per il giorno ${date}.`;
 
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(messaggio)}`;
