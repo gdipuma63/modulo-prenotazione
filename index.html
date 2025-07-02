@@ -40,6 +40,13 @@
     button:hover {
       background-color: #1ebe57;
     }
+    .success-message {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -51,8 +58,18 @@
     <label for="date">Data della prenotazione:</label>
     <input type="date" id="date" required>
 
+    <label for="time">Ora della prenotazione:</label>
+    <input type="time" id="time" required>
+
+    <label for="people">Numero di persone:</label>
+    <input type="number" id="people" min="1" required>
+
     <button type="submit">Invia via WhatsApp</button>
   </form>
+
+  <div id="successMessage" class="success-message">
+    Grazie per avere inviato la richiesta, risponderemo nel più breve tempo possibile per darvi conferma.
+  </div>
 
   <script src="script.js"></script>
 </body>
