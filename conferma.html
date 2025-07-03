@@ -2,11 +2,12 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Conferma Prenotazione</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
+      max-width: 90%;
       margin: 100px auto;
       padding: 20px;
       text-align: center;
@@ -14,13 +15,22 @@
     }
 
     h1 {
-      font-size: 32px; /* Aumentato */
+      font-size: 6vw; /* dimensione flessibile */
       color: #388e3c;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 20px; /* Aumentato */
+      font-size: 5vw; /* dimensione flessibile */
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 32px; /* desktop */
+      }
+      p {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -30,14 +40,13 @@
 
   <script>
     const waLink = localStorage.getItem('wa_link');
-
     setTimeout(() => {
       if (waLink) {
         window.location.href = waLink;
       } else {
         window.close();
       }
-    }, 2000); // Puoi cambiare il tempo qui se vuoi
+    }, 2000); // puoi regolare il tempo qui
   </script>
 </body>
 </html>
