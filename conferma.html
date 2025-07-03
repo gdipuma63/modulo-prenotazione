@@ -21,5 +21,19 @@
 <body>
   <h1>✅ Grazie per avere inviato la richiesta!</h1>
   <p>Risponderemo nel più breve tempo possibile per darvi conferma.</p>
+
+  <script>
+    // Prende il link di WhatsApp dal localStorage
+    const waLink = localStorage.getItem('wa_link');
+
+    // Dopo 3 secondi: reindirizza a WhatsApp
+    setTimeout(() => {
+      if (waLink) {
+        window.location.href = waLink;
+      } else {
+        window.close(); // se non c’è link, chiude la finestra
+      }
+    }, 3000);
+  </script>
 </body>
 </html>
