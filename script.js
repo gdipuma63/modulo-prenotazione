@@ -11,17 +11,15 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     return;
   }
 
-  const numeroWhatsApp = "391234567890"; // Inserisci il tuo numero qui
+  const numeroWhatsApp = "391234567890"; // Sostituisci con il tuo numero!
   const messaggio = `Ciao! Vorrei prenotare a nome di ${name} per il giorno ${date} alle ${time}, per ${people} persone.`;
 
-  const whatsappUrl = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(messaggio)}`;
-
-  // Apre WhatsApp in una nuova scheda
-  window.open(whatsappUrl, '_blank');
+  // Salva i dati nel localStorage per usarli nella pagina di conferma
+  localStorage.setItem('wa_link', `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(messaggio)}`);
 
   // Apre la pagina di conferma in una nuova scheda
   window.open('conferma.html', '_blank');
 
-  // Reset del modulo
+  // Reset modulo
   document.getElementById('bookingForm').reset();
 });
