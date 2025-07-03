@@ -6,15 +6,21 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 600px;
+      max-width: 700px;
       margin: 100px auto;
       padding: 20px;
       text-align: center;
       color: #2e7d32;
     }
+
     h1 {
-      font-size: 24px;
+      font-size: 32px; /* Aumentato */
       color: #388e3c;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px; /* Aumentato */
     }
   </style>
 </head>
@@ -23,17 +29,15 @@
   <p>Risponderemo nel più breve tempo possibile per darvi conferma.</p>
 
   <script>
-    // Prende il link di WhatsApp dal localStorage
     const waLink = localStorage.getItem('wa_link');
 
-    // Dopo 3 secondi: reindirizza a WhatsApp
     setTimeout(() => {
       if (waLink) {
         window.location.href = waLink;
       } else {
-        window.close(); // se non c’è link, chiude la finestra
+        window.close();
       }
-    }, 3000);
+    }, 2000); // Puoi cambiare il tempo qui se vuoi
   </script>
 </body>
 </html>
