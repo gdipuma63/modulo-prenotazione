@@ -21,7 +21,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   const dataFormattata = `${dd}/${mm}/${yyyy}`;
 
   // 📱 Numero WhatsApp
-  const numeroWhatsApp = "391234567890"; // Sostituisci con il tuo numero!
+  const numeroWhatsApp = "393667189531"; // Sostituisci con il tuo numero!
 
   // 📝 Messaggio WhatsApp
   const messaggio = `${saluto}! Vorrei prenotare a nome di ${name} per il giorno ${dataFormattata} alle ${time}, per ${people} persone.`;
